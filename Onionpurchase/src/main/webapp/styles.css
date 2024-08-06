@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+/* Fullscreen Background Image */
+div.fullscreen-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('p2.jpg'); /* Ensure this path is correct */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+     /* Ensure positioning works for child elements */
+}
+
+/* Box Styling */
+.box {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50px;
+    padding: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+/* Text Styling */
+div.dk {
+    color: red;
+    margin: 10px 0;
+    font-family: 'Bodoni', serif;
+    font-size: 1.2em;
+}
+div.kd {
+    color:blue;
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+/* Link Styling */
+a {
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: darkblue;
+    text-decoration: underline;
+}
+
+/* Button Styling */
+button[type="submit"] {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff8040;
+}
+
+/* About the Product Button */
+#about-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    z-index: 2; /* Ensure the button is above other content */
+}
+
+#about-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Product Details Styling */
+#product-details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+#product-details.hidden {
+    display: none;
+}
+
+#product-details button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#product-details button:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .box {
+        padding: 10px;
+    }
+
+    div.dk, div.kd {
+        font-size: 1em;
+    }
+
+    button[type="submit"] {
+        padding: 8px 16px;
+    }
+
+    #about-btn {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
